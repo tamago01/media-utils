@@ -1,3 +1,10 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6fa;
+}
 .form_container {
   width: fit-content;
   height: fit-content;

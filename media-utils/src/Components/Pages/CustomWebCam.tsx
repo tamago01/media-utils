@@ -53,7 +53,7 @@ const CustomWebcam = () => {
 
   const capture = useCallback(() => {
     const imageSrc = webcamRef?.current?.getScreenshot();
-    setImgSrc(imageSrc);
+    setImgSrc(imageSrc ?? null);
   }, [webcamRef]);
 
   const retake = () => {

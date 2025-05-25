@@ -235,7 +235,7 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="webcam-section">
+      <div className="dashboard-title">
         <h2>Webcam Capture</h2>
         <CustomWebcam />
       </div>

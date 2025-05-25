@@ -18,6 +18,7 @@ interface TemporaryPhoto {
     longitude: number;
     accuracy?: number;
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createdAt?: any;
 }
 
@@ -135,7 +136,13 @@ const Media: React.FC = () => {
       ) : (
         <>
           <h2>Photos on Map</h2>
-          <PhotoMap locations={photosWithLocation} />
+          <PhotoMap locations={photosWithLocation as {
+            id: string;
+            imageData: string;
+            location: { latitude: number; longitude: number; accuracy?: number };
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            createdAt?: any;
+          }[]} />
         </>
       )}
     </div>

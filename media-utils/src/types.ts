@@ -1,8 +1,12 @@
+export interface User {
+  id: string;
+  email: string;
+}
 export default interface AuthContextType {
-  currentUser: any;
+  currentUser: User | null;
   userRole: string | null;
-  signup: (email: string, password: string) => Promise<any>;
-  login: (email: string, password: string) => Promise<any>;
-  googleLogin: () => Promise<any>;
+  signup: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<void>;
+  googleLogin: () => Promise<void>;
   logout: () => Promise<void>;
 }

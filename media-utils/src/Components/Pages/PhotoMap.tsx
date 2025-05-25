@@ -28,6 +28,7 @@ interface PhotoMapProps {
     id: string;
     imageData: string;
     location: PhotoLocation;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     createdAt?: any;
   }[];
 }
