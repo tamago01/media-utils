@@ -9,7 +9,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import "./Dashboard.css";
+import "./dashboard.css";
 import CustomWebcam from "./CustomWebCam";
 
 const storage = getStorage();

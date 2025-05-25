@@ -13,7 +13,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getFirestore, collection, addDoc, serverTimestamp, } from "firebase/firestore";
-import "./Dashboard.css";
+import "./dashboard.css";
 import CustomWebcam from "./CustomWebCam";
 const storage = getStorage();
 const db = getFirestore();
