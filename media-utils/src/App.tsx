@@ -4,13 +4,11 @@ import "./index.css";
 import Login from "./Components/Auth/Login";
 import Dashboard from "./Components/Pages/Dashboard";
 import Media from "./Components/Pages/Media";
-import { AuthProvider } from "./Contexts/AuthContexts";
-import PrivateRoute from "./Components/Auth/PrivateRoute";
 
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
@@ -26,24 +24,17 @@ function App() {
 
           <Route path="/" element={<Login />} />
         </Routes>
-      </Router> */}
-      <AuthProvider>
+      </Router>
+      {/* <AuthProvider>
         <Router>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route
-              path="/media"
-              element={
-                <PrivateRoute role="admin">
-                  <Media />
-                </PrivateRoute>
-              }
-            />
+            
             <Route path="/" element={<Login />} />
           </Routes>
         </Router>
-      </AuthProvider>
+      </AuthProvider> */}
     </>
   );
 }

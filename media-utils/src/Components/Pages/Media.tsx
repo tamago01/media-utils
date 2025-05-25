@@ -7,7 +7,6 @@ import {
   orderBy,
 } from "firebase/firestore";
 import PhotoMap from "./PhotoMap";
-import Roles from "../Auth/RolesMgmt";
 import "./dashboard.css";
 
 interface TemporaryPhoto {
@@ -52,7 +51,7 @@ const Media: React.FC = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <Roles />
+      {/* <Roles /> */}
       <h1>Media Gallery</h1>
 
       <div style={{ marginBottom: "20px", display: "flex", gap: "10px" }}>
@@ -136,13 +135,21 @@ const Media: React.FC = () => {
       ) : (
         <>
           <h2>Photos on Map</h2>
-          <PhotoMap locations={photosWithLocation as {
-            id: string;
-            imageData: string;
-            location: { latitude: number; longitude: number; accuracy?: number };
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            createdAt?: any;
-          }[]} />
+          <PhotoMap
+            locations={
+              photosWithLocation as {
+                id: string;
+                imageData: string;
+                location: {
+                  latitude: number;
+                  longitude: number;
+                  accuracy?: number;
+                };
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                createdAt?: any;
+              }[]
+            }
+          />
         </>
       )}
     </div>
